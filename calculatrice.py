@@ -5,6 +5,11 @@ def soustraction(a, b):
     return a - b
 def multiplication(a, b):
     return a * b
+
+def division(a, b):
+    if b == 0:
+        return "Erreur : division par zéro"
+    return a / b
 if __name__ == "__main__":
     operation = sys.argv[1]
     a = float(sys.argv[2])
@@ -15,5 +20,7 @@ if __name__ == "__main__":
         print(soustraction(a, b))
     elif operation == "multiplication":
         print(multiplication(a, b))
+    elif operation == "division":
+        print(division(a, b))
     else:
         print("Opération inconnue :", operation)
